@@ -378,6 +378,7 @@ async function main() {
     .sort((a, b) => new Date(a.utcTime) - new Date(b.utcTime));
   const lateStart = payload.lateStart || {};
   const workflow = payload.workflow || { mode: "direct" };
+  const isForceActivityTest = payload.forceActivity === true;
   const stateFile = lateStart.stateFile || "";
   const lateGraceMs = Number(lateStart.lateGraceMinutes || 25) * 60 * 1000;
   const tooLatePolicy = lateStart.tooLatePolicy || "skip";
@@ -393,6 +394,9 @@ async function main() {
   console.log(`Repo: ${payload.repo || REPO_NAME}`);
   console.log(`Timezone: ${payload.timezone || "unknown"}`);
   console.log(`Workflow mode: ${workflow.mode || "direct"}`);
+  if (isForceActivityTest) {
+    console.log("Force activity test mode: future waits will be skipped.");
+  }
   console.log("");
 
   let changed = false;
@@ -424,10 +428,16 @@ async function main() {
     const targetTime = new Date(commit.utcTime);
     const waitMs = targetTime.getTime() - Date.now();
     if (waitMs > 0) {
-      const mins = Math.floor(waitMs / 60000);
-      const secs = Math.floor((waitMs % 60000) / 1000);
-      console.log(`Waiting ${mins}m ${secs}s for ${commit.plannedId} (${commit.localTime})`);
-      sleep(waitMs);
+      if (isForceActivityTest) {
+        console.log(
+          `Skipping wait for ${commit.plannedId} (${commit.localTime}) because force_activity test mode is enabled.`,
+        );
+      } else {
+        const mins = Math.floor(waitMs / 60000);
+        const secs = Math.floor((waitMs % 60000) / 1000);
+        console.log(`Waiting ${mins}m ${secs}s for ${commit.plannedId} (${commit.localTime})`);
+        sleep(waitMs);
+      }
     } else {
       const lateBy = Math.abs(waitMs);
       if (lateBy > lateGraceMs && tooLatePolicy === "skip") {
