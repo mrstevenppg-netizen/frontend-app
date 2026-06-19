@@ -1,10 +1,3 @@
-/**
- * Target repo commit writer.
- *
- * The controller sends fully planned commits. This script only waits, checks
- * idempotency, writes honest log entries, commits them, and pushes once.
- */
-
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
@@ -24,8 +17,8 @@ function parsePayload() {
       timezone: "UTC",
       targetLogFile: FALLBACK_LOG_FILE,
       lateStart: {
-        lateGraceMinutes: 25,
-        tooLatePolicy: "skip",
+        lateGraceMinutes: 45,
+        tooLatePolicy: "mark-missed",
         lateSpacingSeconds: { min: 75, max: 210 },
         stateFile: "",
         initCommitMessage: "docs: initialise development log",
@@ -229,7 +222,7 @@ function plannedIdMarker(commit, lateStart) {
 }
 
 function appendCommitLog(logFile, commit, payload) {
-  const lateStart = payload.lateStart || {};
+  const lateStart = payload.lateStart || payload.targetRuntime || {};
   const context = inspectRepoContext(payload);
   const note = naturalNote(commit, payload, context);
   const showMetadata = lateStart.showMetadata === true;
@@ -306,7 +299,7 @@ function ensureTextHeader(filePath, payload, commit, intro) {
 
 function appendTextNote(filePath, commit, payload, options = {}) {
   ensureTextHeader(filePath, payload, commit, options.intro);
-  const lateStart = payload.lateStart || {};
+  const lateStart = payload.lateStart || payload.targetRuntime || {};
   const context = inspectRepoContext(payload);
   const note = renderTemplate(
     options.note ||
@@ -680,11 +673,11 @@ function validateSafeTouch(filePath, payload) {
     } catch (err) {
       return {
         ok: false,
-        reason: `npm run lint --if-present failed: ${(
+        reason: `npm run lint --if-present failed: ${
           `${err.stdout || ""}${err.stderr || ""}`.trim() ||
           err.message ||
           "unknown"
-        )}`,
+        }`,
       };
     }
   }
@@ -694,11 +687,11 @@ function validateSafeTouch(filePath, payload) {
     } catch (err) {
       return {
         ok: false,
-        reason: `npm test --if-present failed: ${(
+        reason: `npm test --if-present failed: ${
           `${err.stdout || ""}${err.stderr || ""}`.trim() ||
           err.message ||
           "unknown"
-        )}`,
+        }`,
       };
     }
   }
@@ -1139,12 +1132,12 @@ async function main() {
   const commits = payload.commits
     .filter((commit) => commit && commit.plannedId)
     .sort((a, b) => new Date(a.utcTime) - new Date(b.utcTime));
-  const lateStart = payload.lateStart || {};
+  const lateStart = payload.lateStart || payload.targetRuntime || {};
   const workflow = payload.workflow || { mode: "direct" };
   const isForceActivityTest = payload.forceActivity === true;
   const stateFile = lateStart.stateFile || "";
-  const lateGraceMs = Number(lateStart.lateGraceMinutes || 25) * 60 * 1000;
-  const tooLatePolicy = lateStart.tooLatePolicy || "skip";
+  const lateGraceMs = Number(lateStart.lateGraceMinutes || 45) * 60 * 1000;
+  const tooLatePolicy = lateStart.tooLatePolicy || "mark-missed";
   const stateIds = readStateIds(stateFile);
 
   if (commits.length === 0) {
