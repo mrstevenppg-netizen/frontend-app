@@ -20,3 +20,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-388efe9403e7bb5b -->
 
 - Noted a low-risk readability follow-up near documentation area.
+
+## Accessibility Notes - 2026-07-10
+
+<!-- activity-id: gab-394dabf90252092c -->
+
+- Noted a future check for labels or focus flow near maintenance notes.
