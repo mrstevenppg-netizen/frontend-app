@@ -26,3 +26,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-394dabf90252092c -->
 
 - Noted a future check for labels or focus flow near maintenance notes.
+
+## Documentation Notes - 2026-07-16
+
+<!-- activity-id: gab-d642124c8cd8b6e7 -->
+
+- Added a note to keep documentation notes easier to explain later.
