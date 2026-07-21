@@ -32,3 +32,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-d642124c8cd8b6e7 -->
 
 - Added a note to keep documentation notes easier to explain later.
+
+## UI Cleanup Notes - 2026-07-21
+
+<!-- activity-id: gab-deb3e98e32fe64fc -->
+
+- Recorded a reminder to keep visual cleanup separate from behavior changes.
