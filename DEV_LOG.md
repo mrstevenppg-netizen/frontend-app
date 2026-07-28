@@ -8,3 +8,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-6f5da8430ac72d91 -->
 
 - Captured a reminder to keep GitHub Actions workflow checks in mind.
+
+## UI Cleanup Notes - 2026-07-28
+
+<!-- activity-id: gab-be308c6b0f77d982 -->
+
+- Recorded a reminder to keep visual cleanup separate from behavior changes.
