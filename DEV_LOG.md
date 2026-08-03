@@ -14,3 +14,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-be308c6b0f77d982 -->
 
 - Recorded a reminder to keep visual cleanup separate from behavior changes.
+
+## Testing Observations - 2026-08-03
+
+<!-- activity-id: gab-f779b51c4b359334 -->
+
+- Noted one verification path connected to maintenance notes.
