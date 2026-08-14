@@ -32,3 +32,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-d642124c8cd8b6e7 -->
 
 - Added a note to keep documentation notes easier to explain later.
+
+## Documentation Notes - 2026-08-14
+
+<!-- activity-id: gab-dc7cb8b858d58334 -->
+
+- Marked a small wording improvement for the next documentation pass.
