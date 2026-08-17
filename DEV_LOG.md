@@ -14,3 +14,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-be308c6b0f77d982 -->
 
 - Recorded a reminder to keep visual cleanup separate from behavior changes.
+
+## Cleanup Notes - 2026-08-17
+
+<!-- activity-id: gab-8aa1c0f146197db0 -->
+
+- Recorded a small cleanup thought around documentation notes without changing behavior.
