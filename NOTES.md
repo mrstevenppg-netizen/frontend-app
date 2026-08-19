@@ -32,3 +32,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-d642124c8cd8b6e7 -->
 
 - Added a note to keep documentation notes easier to explain later.
+
+## Accessibility Notes - 2026-08-19
+
+<!-- activity-id: gab-0eb503a1e1cd5e2f -->
+
+- Recorded an observation about keeping interactive states easy to inspect.
