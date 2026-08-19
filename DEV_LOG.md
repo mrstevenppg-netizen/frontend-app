@@ -14,3 +14,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-be308c6b0f77d982 -->
 
 - Recorded a reminder to keep visual cleanup separate from behavior changes.
+
+## Documentation Notes - 2026-08-19
+
+<!-- activity-id: gab-d0673fc510c0a999 -->
+
+- Captured a docs reminder connected to GitHub Actions workflow.
