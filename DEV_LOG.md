@@ -20,3 +20,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-23ac25f41e2c85dc -->
 
 - Recorded a small cleanup thought around documentation notes without changing behavior.
+
+## Cleanup Notes - 2026-08-21
+
+<!-- activity-id: gab-64b7d1a50f994518 -->
+
+- Kept a cleanup reminder visible for the next time this repo is touched.
