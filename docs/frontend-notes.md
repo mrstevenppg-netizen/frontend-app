@@ -20,3 +20,9 @@ Short repo-specific context for the next maintenance pass.
 <!-- activity-id: gab-5a51389a400ccdee -->
 
 - Captured an accessibility reminder around documentation notes.
+
+## Frontend Notes - 2026-08-31
+
+<!-- activity-id: gab-bfa8ab52165088ee -->
+
+- Checked for leftover debug notes and marked one area for later cleanup.
