@@ -27,3 +27,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-bc5a99fd6aba4bb5 -->
 
 - Recorded a reminder to verify interaction states during the next UI pass.
+
+## Accessibility Notes - 2026-09-01
+
+<!-- activity-id: gab-abfed6b47333afa1 -->
+
+- Recorded a reminder to verify interaction states during the next UI pass.
