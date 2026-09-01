@@ -27,3 +27,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-bc5a99fd6aba4bb5 -->
 
 - Recorded a reminder to verify interaction states during the next UI pass.
+
+## Testing Observations - 2026-09-01
+
+<!-- activity-id: gab-2e021000be765206 -->
+
+- Reviewed test coverage expectations for the next related change.
