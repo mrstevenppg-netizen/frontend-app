@@ -39,3 +39,9 @@ Ongoing development notes, maintenance observations, and project activity record
 - Planned local time: 19:43 Asia/Karachi
 - Planned ID: gab-250f93ed5478b55f
 - Reason: Workflow started after the configured late grace period.
+
+## Documentation Notes - 2026-09-01
+
+<!-- activity-id: gab-76193adccf4c72e7 -->
+
+- Captured a docs reminder connected to GitHub Actions workflow.
