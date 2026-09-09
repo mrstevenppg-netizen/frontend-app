@@ -40,3 +40,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-07cb8800ba21dab5 -->
 
 - Noted a small cleanup opportunity that can be handled with the next related change.
+
+## Accessibility Notes - 2026-09-09
+
+<!-- activity-id: gab-3904eeced79fe01b -->
+
+- Captured an accessibility check to run during the next UI-focused pass.
