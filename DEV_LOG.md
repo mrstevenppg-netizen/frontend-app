@@ -40,3 +40,9 @@ Ongoing development notes, maintenance observations, and project activity record
 <!-- activity-id: gab-d7ab0f056c1855ab -->
 
 - Captured a small follow-up for component readability.
+
+## Testing Observations - 2026-09-15
+
+<!-- activity-id: gab-438d3d4e0562458f -->
+
+- Recorded a testing observation without changing runtime behavior.
