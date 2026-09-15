@@ -26,3 +26,9 @@ Short repo-specific context for the next maintenance pass.
 <!-- activity-id: gab-bfa8ab52165088ee -->
 
 - Checked for leftover debug notes and marked one area for later cleanup.
+
+## Frontend Notes - 2026-09-15
+
+<!-- activity-id: gab-8907fe6fd1ca77a3 -->
+
+- Checked for leftover debug notes and marked one area for later cleanup.
