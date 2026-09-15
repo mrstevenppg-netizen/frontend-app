@@ -34,3 +34,9 @@ Ongoing development notes, maintenance observations, and project activity record
 - Planned local time: 15:09 Asia/Karachi
 - Planned ID: gab-3b4bccbc73f83177
 - Reason: Workflow started after the configured late grace period.
+
+## UI Cleanup Notes - 2026-09-15
+
+<!-- activity-id: gab-d7ab0f056c1855ab -->
+
+- Captured a small follow-up for component readability.
